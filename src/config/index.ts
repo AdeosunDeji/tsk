@@ -9,7 +9,6 @@ const config = {
   logger: logger(),
   PORT: process.env.PORT,
   APP_NAME: process.env.APP_NAME,
-  // SQL_URL: process.env.SQL_URL,
   SECRET: process.env.SECRET,
   DB_NAME: String(process.env.DB_NAME),
   DB_HOST: process.env.DB_HOST,
