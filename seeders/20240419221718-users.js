@@ -22,10 +22,10 @@ module.exports = {
       return { ...user, password: hashedPassword };
     }));
 
-    await queryInterface.bulkInsert('Users', hashedSeedData, {}); 
+    await queryInterface.bulkInsert('users', hashedSeedData, {}); 
   },
 
   async down (queryInterface, Sequelize) {
-    await queryInterface.bulkDelete('Users', null, {});
+    await queryInterface.bulkDelete('users', null, {});
   }
 };
