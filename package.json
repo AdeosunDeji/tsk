@@ -1,0 +1,47 @@
+{
+  "name": "task",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm run build && node ./build/app.js",
+    "dev": "nodemon src/app.ts",
+    "migration": "npm run migrate:undo && npm run migrate",
+    "migrate": "npx sequelize-cli db:migrate",
+    "migrate:undo": "npx sequelize-cli db:migrate:undo",
+    "seeder": "npm run seed:undo && npm run seed",
+    "seed": "npx sequelize-cli db:seed:all",
+    "seed:undo": "npx sequelize-cli db:seed:undo"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/bcrypt": "^5.0.2",
+    "@types/cors": "^2.8.17",
+    "@types/dotenv": "^8.2.0",
+    "@types/express": "^4.17.21",
+    "@types/jsonwebtoken": "^9.0.6",
+    "@types/lodash": "^4.17.0",
+    "@types/luxon": "^3.4.2",
+    "@types/node": "^20.12.7",
+    "nodemon": "^3.1.0",
+    "sequelize-cli": "^6.6.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "joi": "^17.12.3",
+    "lodash": "^4.17.21",
+    "mysql": "^2.18.1",
+    "mysql2": "^3.9.6",
+    "pino": "^8.20.0",
+    "sequelize": "^6.37.3",
+    "sequelize-typescript": "^2.1.6"
+  }
+}
